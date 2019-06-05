@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>Hertz-UTS</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <link rel="stylesheet" href="components/css/zerogrid.css">
+    <link rel="stylesheet" href="components/css/style.css">
+    <link rel="stylesheet" href="components/css/responsiveslides.css">
+    <link rel="stylesheet" href="components/css/bootstrap.min.css">
+
+    <script src="components/js/jquery-latest.min.js"></script>
+    <script src="components/js/script.js"></script>
+    <script src="components/js/jquery183.min.js"></script>
+    <script src="components/js/responsiveslides.min.js"></script>
+
+
+    <script>
+
+        $(function () {
+
+            $("#slider").responsiveSlides({
+                auto: true,
+                pager: false,
+                nav: true,
+                speed: 300,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+<div class="wrap-body">
+
+
+    <header class="bg-theme">
+        <div class="wrap-header zerogrid navbar">
+            <div class="row">
+                <a href='index.html' class="logo"><img src="images/logo.png"/></a>
+                <div id="cssmenu">
+                    <ul>
+                        <li class='active'><a href="index.html">Home</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="slider">
+        <!-- Slideshow -->
+        <div class="callbacks_container">
+            <ul class="rslides" id="slider">
+                <li>
+                    <img src="images/image1.jpg" alt="">
+                    <div class="caption">
+
+                    </div>
+                </li>
+                <li>
+                    <img src="images/image2.jpg" alt="">
+                    <div class="caption">
+
+                    </div>
+                </li>
+                <li>
+                    <img src="images/image3.jpg" alt="">
+                    <div class="caption">
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+
+    <div class="bg-theme">
+        <div class="filter zerogrid">
+		
+<nav class="navbar fixed-top navbar-light bg-light">
+    <a href="index.html" class="navbar-brand mb-0 h1"><b>Car Rental Center</b> <span class="navbar-text"></span></a>
+    <a href="components/reservation/car_reservation.php" target="mainFrame" class="btn btn-outline-success my-2 my-sm-0">Reservation Cart</a>
+</nav>
+
+<iframe name="mainFrame" id="mainFrame" frameborder="0" scrolling="no" onload='javascript:resizeIframe(this);'
+        style="border-style: none; width: 100%; margin-top: 85px;"
+        src="components/product/car_rental_center.html"></iframe>
+
+
+ </div>
+    </div>
+
+    <!--////////////////////////////////////Container-->
+   
+</div>
+</body>
+</html>
